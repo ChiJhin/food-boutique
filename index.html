@@ -6,25 +6,169 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
     
-    <script type="module" crossorigin src="/food-boutique/assets/test-e67ef29a.js"></script>
-    <link rel="stylesheet" href="/food-boutique/assets/test-a7e02ade.css">
+    <script type="module" crossorigin src="/food-boutique/assets/test-4bc08180.js"></script>
+    <link rel="stylesheet" href="/food-boutique/assets/test-3c22ada7.css">
   </head>
   <body>
-    <div class="page--wrap">
-      <!-- <svg class="modal-btn-icon">
-        <use href="./img/icons.svg#close-icon"></use>
-      </svg> -->
-      <header>
-  <h1>Food Boutique</h1>
+    <div class="wrapper">
+      <header class="header container">
+  <a class="header__logo" href="./index.html">
+    <span class="header__logo-icon-wrap">
+      <svg class="header__logo-icon">
+        <use href="/food-boutique/assets/icons-e39e3f57.svg#logo-icon"></use>
+      </svg>
+    </span>
+    <p class="header__logo-title">Food Boutique</p>
+  </a>
+  <div class="header__nav">
+    <a href="./index.html" class="header__home-page">Home</a>
+    <a href="./cart.html" class="header__cart-page">
+      <span class="header__cart-icon-wrap">
+        <svg class="header__cart-icon">
+          <use href="/food-boutique/assets/icons-e39e3f57.svg#shopping-cart-icon"></use>
+        </svg>
+      </span>
+      <p class="header__cart-title">CART(0)</p>
+    </a>
+  </div>
 </header>
 
 
-      <main></main>
-      <div class="js-object" data-jsname="boba"><p>Boba</p></div>
-      <div class="js-object" data-jsname="lola"><p>Lola</p></div>
-      <div class="js-object" data-jsname="batman"><p>BATMAN</p></div>
-      <footer>
-  <h2>Footer</h2>
+      <main class="container">
+        <section class="hero">
+  <h1 class="hero__title">
+    Welcome to the <span class="hero__title-accent">Food</span> Boutique!
+  </h1>
+
+  <p class="hero__description">
+    With Food Boutique, you're not just subscribing to food, you're signing up
+    for a fresher, fitter, and happier you.
+  </p>
+
+  <div class="hero__image-wrap">
+    <picture>
+      <source
+        media="(min-width: 1440px)"
+        srcset="/food-boutique/assets/hero-desktop@1x-dfce4e24.jpg 1x, /food-boutique/assets/hero-desktop@2x-e84d1cb0.jpg 2x"
+      />
+
+      <source
+        media="(min-width: 768px)"
+        srcset="/food-boutique/assets/hero-tablet@1x-4af3d966.jpg 1x, /food-boutique/assets/hero-tablet@2x-410e78b4.jpg 2x"
+      />
+
+      <source
+        media="(min-width: 200px)"
+        srcset="/food-boutique/assets/hero-mobile@1x-63382c28.jpg 1x, /food-boutique/assets/hero-mobile@2x-9d3bcbc9.jpg 2x"
+      />
+      <img
+        class="hero__image"
+        src="/food-boutique/assets/hero-mobile@1x-63382c28.jpg"
+        alt="Свіжі та соковиті овочі"
+      />
+    </picture>
+    <img class="hero__lable" src="/food-boutique/assets/hero-label-b2bbf8db.png" alt="Лейбл" />
+  </div>
+</section>
+
+        <section class="filter">
+          <form class="filter__form" name="filter" autocomplete="off">
+  <label class="filter__lable">
+    Filters:
+    <input type="text" name="filter-inpute" placeholder="Search for anything" />
+    <button class="filter__search-button" type="submit">
+      <svg class="filter__search-icon">
+        <use href="/food-boutique/assets/icons-e39e3f57.svg#search-icon"></use>
+      </svg>
+    </button>
+  </label>
+
+  <select name="category" id="category"></select>
+</form>
+
+        </section>
+        
+        
+      </main>
+
+      <footer class="footer">
+  <div class="container">
+    <div class="footer-main">
+      <div class="footer__first-block">
+        <a class="footer__logo" href="./index.html">
+          <span class="footer__logo-icon-wrap">
+            <svg class="footer__logo-icon">
+              <use href="/food-boutique/assets/icons-e39e3f57.svg#logo-icon"></use>
+            </svg>
+          </span>
+          <p class="footer__logo-title">Food Boutique</p>
+        </a>
+        <ul class="footer__sosial-list">
+          <li class="footer__sosial-item">
+            <a
+              class="footer__sosial-link"
+              href="https://www.facebook.com/goITclub/"
+              target="_blank"
+            >
+              <svg class="footer__sosial-icon">
+                <use href="/food-boutique/assets/icons-e39e3f57.svg#facebook-icon"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="footer__sosial-item">
+            <a
+              class="footer__sosial-link"
+              href="https://www.instagram.com/goitclub/"
+              target="_blank"
+            >
+              <svg class="footer__sosial-icon">
+                <use href="/food-boutique/assets/icons-e39e3f57.svg#instagram-icon"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="footer__sosial-item">
+            <a
+              class="footer__sosial-link"
+              href="https://www.youtube.com/c/GoIT"
+              target="_blank"
+            >
+              <svg class="footer__sosial-icon">
+                <use href="/food-boutique/assets/icons-e39e3f57.svg#youtube-icon"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__second-block">
+        <div class="footer__slogan">
+          <h2 class="footer__slogan-totle">
+            Discover the Variety of Flavors and Quality
+          </h2>
+          <p class="footer__slogan-description">
+            An online store where you will find fresh, natural and delicious
+            products for a healthy life and unforgettable gastronomic
+            adventures.
+          </p>
+        </div>
+        <div class="footer__form-block">
+          <p class="footer__form-description">
+            Subscribe and learn about new products!
+          </p>
+          <form class="footer__form">
+            <input class="footer__form-inpute" type="text" />
+            <button class="footer__form-button" type="submit">Send</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="policy">
+      <a class="policy__title" href="#">Food Boutique. All rights reserved.</a>
+      <div class="policy__privacy-&-terms">
+        <a href="#">Privacy Policy</a><span> / </span
+        ><a href="#">Terms of Service</a>
+      </div>
+    </div>
+  </div>
 </footer>
 
     </div>
