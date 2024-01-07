@@ -1,5 +1,3 @@
-
-
 export default class {
   constructor() {
     //add nodes as attributes
@@ -15,7 +13,7 @@ export default class {
 
   refresh() {
     //delete all attributes
-    for (var key in this) {
+    for (let key in this) {
       if (key in this) {
         delete this[key];
       }

@@ -8,16 +8,18 @@
     <link rel="stylesheet" href="./css/main.css" />
   </head>
   <body>
-    <div class="page--wrap">
-      <!-- <svg class="modal-btn-icon">
-        <use href="./img/icons.svg#close-icon"></use>
-      </svg> -->
+    <div class="wrapper">
       <load ="partials/header.html" />
 
-      <main></main>
-      <div class="js-object" data-jsname="boba"><p>Boba</p></div>
-      <div class="js-object" data-jsname="lola"><p>Lola</p></div>
-      <div class="js-object" data-jsname="batman"><p>BATMAN</p></div>
+      <main class="container">
+        <load ="partials/home/hero.html" />
+        <section class="filter">
+          <load ="partials/home/filter.html" />
+        </section>
+        <load ="partials/home/popular.html" />
+        <load ="partials/home/discount.html" />
+      </main>
+
       <load ="partials/footer.html" />
     </div>
     <script type="module" src="./main.js"></script>
