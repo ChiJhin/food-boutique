@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
     
-    <script type="module" crossorigin src="/food-boutique/assets/test-4bc08180.js"></script>
-    <link rel="stylesheet" href="/food-boutique/assets/test-3c22ada7.css">
+    <script type="module" crossorigin src="/food-boutique/assets/test-e01678b2.js"></script>
+    <link rel="stylesheet" href="/food-boutique/assets/test-4d89a489.css">
   </head>
   <body>
     <div class="wrapper">
@@ -73,17 +73,23 @@
 
         <section class="filter">
           <form class="filter__form" name="filter" autocomplete="off">
-  <label class="filter__lable">
-    Filters:
-    <input type="text" name="filter-inpute" placeholder="Search for anything" />
+  <label class="filter__lable" for="filter-inpute"> Filters: </label>
+  <div class="filter__input-wrap">
+    <input
+      type="text"
+      id="filter-inpute"
+      class="filter__input"
+      name="filter-inpute"
+      placeholder="Search for anything"
+    />
     <button class="filter__search-button" type="submit">
       <svg class="filter__search-icon">
         <use href="/food-boutique/assets/icons-e39e3f57.svg#search-icon"></use>
       </svg>
     </button>
-  </label>
+  </div>
 
-  <select name="category" id="category"></select>
+  <select class="filter__category" name="category" id="category"></select>
 </form>
 
         </section>
@@ -155,7 +161,11 @@
             Subscribe and learn about new products!
           </p>
           <form class="footer__form">
-            <input class="footer__form-inpute" type="text" />
+            <input
+              class="footer__form-inpute"
+              type="email"
+              placeholder="Email"
+            />
             <button class="footer__form-button" type="submit">Send</button>
           </form>
         </div>
