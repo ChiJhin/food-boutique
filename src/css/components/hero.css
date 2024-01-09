@@ -30,8 +30,8 @@
 
 .hero__lable {
   position: absolute;
-  top: -7px;
-  left: 227px;
+  top: -2%;
+  right: 3%;
   width: 100px;
   height: 100px;
 }
