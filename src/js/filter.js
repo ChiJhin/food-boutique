@@ -1,5 +1,7 @@
 import fetchApi from './service/fetchApi';
 import SlimSelect from 'slim-select';
+import '../../node_modules/slim-select/dist/slimselect.css';
+import '../css/components/filter.css';
 
 const categories = document.getElementById('category');
 console.log(categories);
@@ -9,12 +11,13 @@ fetchApi
   .then(data => {
     console.log(data);
 
-    categories.insertAdjacentHTML('beforeend', markupFilter(data));
+    categories.insertAdjacentHTML('afterbegin', markupFilter(data));
     new SlimSelect({
       select: '#category',
       settings: {
         showSearch: false,
         openPosition: 'down',
+        placeholderText: 'Categories',
       },
     });
   })
