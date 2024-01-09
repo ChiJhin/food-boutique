@@ -3,14 +3,14 @@
 
 @font-face {
   font-family: 'Neue Montreal';
-  src: url('../fonts/NeueMontreal-Regular.otf');
+  src: url('./fonts/NeueMontreal-Regular.otf');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Quincy';
-  src: url('../fonts/Fontspring-DEMO-quincycf-text.otf');
+  src: url('./fonts/Fontspring-DEMO-quincycf-text.otf');
   font-weight: normal;
   font-style: normal;
 }
