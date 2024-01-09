@@ -5,14 +5,11 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
-    <link
-      href="https://unpkg.com/slim-select@latest/dist/slimselect.css"
-      rel="stylesheet"
-    />
     
-    <script type="module" crossorigin src="/food-boutique/assets/vendor-4c1822c7.js"></script>
-    <script type="module" crossorigin src="/food-boutique/assets/filter-f95b8a91.js"></script>
+    <script type="module" crossorigin src="/food-boutique/assets/vendor-45851ecf.js"></script>
+    <script type="module" crossorigin src="/food-boutique/assets/filter-7075f341.js"></script>
     <link rel="stylesheet" href="/food-boutique/assets/filter-5dc192bf.css">
+    <link rel="stylesheet" href="/food-boutique/assets/vendor-15b56f1d.css">
   </head>
   <body>
     <div class="wrapper">
@@ -96,7 +93,10 @@
     </div>
   </div>
 
-  <select class="filter__category" name="category" id="category"></select>
+  <select class="filter__category" name="category" id="category">
+    <option data-placeholder="true"></option>
+    <option value="Show_all">Show all</option>
+  </select>
 </form>
 
 <div class="filter__page">
