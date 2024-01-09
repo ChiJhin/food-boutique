@@ -6,10 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cart</title>
     
-    <script type="module" crossorigin src="/food-boutique/assets/vendor-45851ecf.js"></script>
-    <script type="module" crossorigin src="/food-boutique/assets/filter-7075f341.js"></script>
-    <link rel="stylesheet" href="/food-boutique/assets/vendor-15b56f1d.css">
-    <link rel="stylesheet" href="/food-boutique/assets/filter-5dc192bf.css">
+    <script type="module" crossorigin src="/food-boutique/assets/vendor-4c1822c7.js"></script>
+    <script type="module" crossorigin src="/food-boutique/assets/index-ab55e994.js"></script>
+    <link rel="stylesheet" href="/food-boutique/assets/index-e4d4f213.css">
   </head>
   <body>
     <div class="wrapper">
@@ -36,7 +35,36 @@
 </header>
 
 
-      <main class="container"></main>
+      <main class="container">
+        <section class="basket">
+  <h2 class="basket__quantity">
+    <span class="basket__icon-wrap">
+      <svg class="basket__icon">
+        <use href="/food-boutique/assets/icons-e39e3f57.svg#shopping-cart-icon"></use>
+      </svg> </span
+    >CART(0)
+  </h2>
+  <div class="basket__empty-block">
+    <picture>
+      <source media="(min-width: 768px)" srcset="/food-boutique/assets/empty-basket@2x-1ab3be8c.png " />
+
+      <img
+        class="basket__basket-image"
+        src="/food-boutique/assets/empty-basket@1x-9909cc93.png"
+        alt="Кошик"
+      />
+    </picture>
+    <h3 class="basket__empty-title">
+      Your basket is <span class="basket__accent">empty...</span>
+    </h3>
+    <p class="basket__empty-descroption">
+      Go to the main page to select your favorite products and add them to the
+      cart.
+    </p>
+  </div>
+</section>
+
+      </main>
 
       <footer class="footer">
   <div class="container">
