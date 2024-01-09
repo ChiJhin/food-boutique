@@ -1,6 +1,6 @@
 import fetchApi from './service/fetchApi';
 import SlimSelect from 'slim-select';
-import '../../node_modules/slim-select/dist/slimselect.css';
+import '/slim-select/dist/slimselect.css';
 import '../css/components/filter.css';
 
 const categories = document.getElementById('category');
