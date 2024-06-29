@@ -2,7 +2,6 @@ import fetchApi from './service/fetchApi';
 import SlimSelect from 'slim-select';
 
 const categories = document.getElementById('category');
-console.log(categories);
 
 export default async function category() {
   await fetchApi
