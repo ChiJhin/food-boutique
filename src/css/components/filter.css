@@ -16,6 +16,7 @@
 .filter__input {
   padding: 14px 20px;
   max-width: 335px;
+  min-height: 48px;
   width: 100%;
   border: 1px solid rgba(1, 1, 1, 0.3);
   border-radius: 30px;
@@ -46,9 +47,11 @@
 .filter__category {
   padding: 14px 20px;
   max-width: 335px;
+  min-height: 48px;
   width: 100%;
   border: 1px solid rgba(1, 1, 1, 0.3);
   background-color: var(--primary-white-color);
+  appearance: none;
 }
 
 .filter__empty {
@@ -81,6 +84,15 @@
 
 .ss-content.ss-open-below {
   background-color: var(--secondary-white-color);
+}
+
+.ss-main {
+  max-height: 48px;
+}
+
+.filter__card-list {
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 @media screen and (min-width: 768px) {

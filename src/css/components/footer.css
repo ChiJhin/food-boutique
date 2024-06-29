@@ -1,5 +1,6 @@
 .footer {
   padding-top: 40px;
+  padding-bottom: 20px;
   color: var(--primary-white-color);
   background-color: var(--primary-green-color);
 }
@@ -111,6 +112,9 @@
 }
 
 .policy {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
   font-size: 14px;
   font-weight: 400;
 }

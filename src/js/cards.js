@@ -90,34 +90,37 @@ export default {
     return data
       .map(
         ({ _id, img, name, category, size, popularity }) => ` 
-        <li class ="cards-item" data-productid="${_id}" >
-            <div id ="${_id}" class="photo-card">
-                        <img class = "cards__image" src="${img}" alt="${name}" loading="lazy" />
-                     
-                </div> 
-                <div class=" discount-show">
-                        <h3 class="info-title">${name}</h3>      
-                        <p class="info-text">
-                            Category:<span class="info-span">${category}</span>
+        <li class ="popular__item" data-productid="${_id}" >
+            <div id ="${_id}" class="card">
+                  <div class="card__img-wrap">
+                        <img class = "card__img" src="${img}" alt="${name}" loading="lazy" />
+                  </div>
+                
+                <div class="card__description">
+                        <h3 class="card__description-title">${name}</h3>      
+                        <p class="card__description-text card__description-category">
+                            Category:<span class="card__description-accent"> ${category}</span>
                         </p>
-                        <wraper class="info-wraper">
-                            <p class="info-text">
-                                Size:<span class="info-span">${size}</span>
+                        <div class="card__description-info">
+                            <p class="card__description-text">
+                                Size:<span class="card__description-accent"> ${size}</span>
                             </p>
-                            <p class="info-text">
-                                Popularity:<span class="info-span">${popularity}</span>
+                            <p class="card__description-text">
+                                Popularity:<span class="card__description-accent"> ${popularity}</span>
                             </p>
-                        </wraper>
+                        </div>
                    </div>
-                   <button id="${_id}" class="popular-products-btn js-btn discount-buy js-object" data-jsname="btn1${_id}"  type="button">
-                        <svg class="basket-icon-svg js-btn "   width="12" height="12">
+                   <button id="${_id}" class="card__btn js-btn js-object" data-jsname="btn1${_id}"  type="button">
+                        <svg class="card__icon js-btn "  >
+                           
                             <use class="js-btn" href="${cartIcon}"></use>
                         </svg>
                     </button>
-                    <div id="${_id}" class="check-btn js-object js-btn" data-jsname="check${_id}" >
-                    <svg  class="check-icon-svg  discount-buy  js-btn" width="12" height="12">
+                    <button id="${_id}" class="card__btn js-object js-btn" data-jsname="check${_id}" >
+                    <svg  class="card__icon js-btn">
                             <use href="${checkedIcon}"></use>
-                        </svg></div>
+                        </svg></button>
+                        </div> 
                    </li>    
                       
     `

@@ -19,16 +19,14 @@ export default async function getProducts(params) {
     .products({ limit: limit, params })
     .then(data => {
       console.log(data);
-      console.log(data.results);
+
       if (!data) {
         cardList.style.display = 'none';
         cardListEmty.style.display = 'block';
       }
 
-      cardList.style.display = 'block';
+      cardList.style.display = 'flex';
       cardListEmty.style.display = 'none';
-
-      console.log(cards.mainCatd(data.results));
 
       cardList.innerHTML = cards.mainCatd(data.results);
 
