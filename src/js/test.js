@@ -1,10 +1,6 @@
-import refs from './service/refs';
 import localStorageApi from './service/localStorageApi';
 
-const tag = new refs();
-
-console.log(tag.batman);
-
+console.log('test: ', localStorageApi.loadFilter());
 localStorageApi.saveFilter({ keyA: 'A' });
 console.log('test: ', localStorageApi.loadFilter());
 localStorageApi.saveFilter({ KeyB: 'B' });

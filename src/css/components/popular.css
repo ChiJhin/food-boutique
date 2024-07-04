@@ -1,13 +1,19 @@
 .popular {
   margin-bottom: 80px;
 }
-.popular__title {
-  margin-bottom: 20px;
-}
+
 .popular__list {
   display: flex;
   flex-direction: column;
   gap: 14px;
+}
+
+.popular__list .card__image-wrap {
+  padding: 9px;
+  margin-bottom: 0;
+}
+.popular__list .card__image {
+  width: 56px;
 }
 .popular__item {
   width: 100%;
@@ -19,9 +25,6 @@
   background-color: var(--secondary-white-color);
   border-radius: 10px;
   padding: 12px;
-}
-.card__img {
-  width: 56px;
 }
 
 .card__description-title {
@@ -45,13 +48,7 @@
   display: flex;
   gap: 9px;
 }
-.card__btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 20px;
-  height: 20px;
-}
+
 .card__icon {
   color: var(--primary-green-color);
   width: 12px;

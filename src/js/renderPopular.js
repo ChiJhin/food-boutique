@@ -15,8 +15,6 @@ export default async function getPopular() {
 
       popularList.innerHTML = cards.popularCard(data);
 
-      console.log(data);
-
       return data;
     })
     .catch(error => console.log(error));
