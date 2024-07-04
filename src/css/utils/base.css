@@ -52,11 +52,6 @@
   }
 }
 
-.card__img-wrap {
-  padding: 9px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--primary-white-color);
-  border-radius: 10px;
+.aside-title {
+  margin-bottom: 20px;
 }

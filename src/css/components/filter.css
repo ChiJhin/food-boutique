@@ -2,6 +2,10 @@
   padding-top: 86px;
 }
 
+.filter__form {
+  margin-bottom: 40px;
+}
+
 .filter__form,
 .filter__wrap {
   display: flex;

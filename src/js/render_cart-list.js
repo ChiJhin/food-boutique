@@ -18,8 +18,6 @@ export default async function getProducts(params) {
   await fetchApi
     .products({ limit: limit, params })
     .then(data => {
-      console.log(data);
-
       if (!data) {
         cardList.style.display = 'none';
         cardListEmty.style.display = 'block';
