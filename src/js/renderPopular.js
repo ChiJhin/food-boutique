@@ -2,20 +2,25 @@ import fetchApi from './service/fetchApi';
 import cards from './cards';
 
 const popularList = document.querySelector('.popular__list');
+const popular = document.querySelector('.popular');
 
 export default async function getPopular() {
   await fetchApi
     .popular()
     .then(data => {
       if (!data) {
-        popularList.style.display = 'none';
+        popular.style.display = 'none';
       }
 
-      popularList.style.display = 'flex';
+      popular.style.display = 'block';
 
       popularList.innerHTML = cards.popularCard(data);
 
-      return data;
+      cards.checkBtn(data);
+
+      return;
     })
-    .catch(error => console.log(error));
+    .catch(error => {
+      return console.log(error), (popular.style.display = 'none');
+    });
 }

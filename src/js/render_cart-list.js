@@ -3,6 +3,7 @@ import paginy from './service/pagination';
 import cards from './cards';
 
 const cardList = document.querySelector('.filter__card-list');
+const filter = document.querySelector('.filter__full');
 const cardListEmty = document.querySelector('.filter__empty');
 
 let limit = 6;
@@ -19,16 +20,18 @@ export default async function getProducts(params) {
     .products({ limit: limit, params })
     .then(data => {
       if (!data) {
-        cardList.style.display = 'none';
+        filter.style.display = 'none';
         cardListEmty.style.display = 'block';
       }
 
-      cardList.style.display = 'flex';
+      filter.style.display = 'block';
       cardListEmty.style.display = 'none';
 
-      cardList.innerHTML = cards.mainCatd(data.results);
+      cardList.innerHTML = cards.mainCard(data.results);
 
-      return data, paginy(data);
+      cards.checkBtn(data.results);
+
+      return paginy(data);
     })
     .catch(error => console.log(error));
 }

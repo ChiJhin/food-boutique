@@ -34,10 +34,6 @@
   font-weight: 900;
 }
 
-.footer__slogan {
-  margin-bottom: 80px;
-}
-
 .footer__sosial-list {
   display: flex;
   gap: 12px;
@@ -47,6 +43,10 @@
 .footer__sosial-item {
   border-radius: 10px;
   border: 1px solid var(--primary-white-color);
+}
+
+.footer__sosial-item:hover {
+  background-color: #e8e8e233;
 }
 
 .footer__sosial-link {
@@ -61,6 +61,10 @@
 }
 
 .footer__second-block {
+  margin-bottom: 80px;
+}
+
+.footer__slogan {
   margin-bottom: 80px;
 }
 
@@ -111,10 +115,51 @@
   background-color: var(--primary-white-color);
 }
 
+.footer__form-button:hover {
+  color: var(--primary-green-color);
+}
+
 .policy {
   display: flex;
   flex-direction: column;
   gap: 8px;
   font-size: 14px;
   font-weight: 400;
+}
+
+@media screen and (min-width: 768px) {
+  .footer-main {
+    display: flex;
+    justify-content: space-between;
+  }
+  .footer__first-block {
+    width: 220px;
+  }
+  .footer__second-block {
+    max-width: 429px;
+  }
+  .footer__logo-title {
+    font-size: 24px;
+  }
+  .footer__logo {
+    max-width: 200px;
+  }
+  .footer__form-block {
+    width: 336px;
+  }
+  .policy {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .footer__second-block {
+    display: flex;
+    gap: 148px;
+    max-width: 100%;
+  }
+  .footer__slogan {
+    width: 410px;
+    margin: 0;
+  }
 }

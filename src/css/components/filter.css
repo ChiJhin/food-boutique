@@ -95,6 +95,7 @@
 }
 
 .filter__card-list {
+  display: flex;
   flex-wrap: wrap;
   gap: 20px;
 }
@@ -106,5 +107,23 @@
   }
   .filter__category {
     max-width: 189px;
+  }
+  .filter__card-list {
+    gap: 32px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .filter {
+    display: flex;
+    justify-content: space-between;
+  }
+  .aside {
+    width: 275px;
+    margin-top: 112px;
+  }
+  .filter__card-list {
+    row-gap: 40px;
+    column-gap: 20px;
   }
 }

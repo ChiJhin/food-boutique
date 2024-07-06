@@ -1,41 +1,43 @@
-<form class="filter__form" name="filter" autocomplete="off">
-  <div class="filter__wrap">
-    <label class="filter__lable" for="filter-inpute"> Filters: </label>
-    <div class="filter__input-wrap">
-      <input
-        type="text"
-        id="filter-inpute"
-        class="filter__input"
-        name="filter-inpute"
-        placeholder="Search for anything"
-      />
-      <button class="filter__search-button" type="submit">
-        <svg class="filter__search-icon">
-          <use href="./img/icons.svg#search-icon"></use>
-        </svg>
-      </button>
+<div>
+  <form class="filter__form" name="filter" autocomplete="off">
+    <div class="filter__wrap">
+      <label class="filter__lable" for="filter-inpute"> Filters: </label>
+      <div class="filter__input-wrap">
+        <input
+          type="text"
+          id="filter-inpute"
+          class="filter__input"
+          name="filter-inpute"
+          placeholder="Search for anything"
+        />
+        <button class="filter__search-button" type="submit">
+          <svg class="filter__search-icon">
+            <use href="./img/icons.svg#search-icon"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <select class="filter__category" name="category" id="category">
+      <option data-placeholder="true"></option>
+      <option value="Show_all">Show all</option>
+    </select>
+  </form>
+
+  <div class="filter__page">
+    <div class="filter__empty">
+      <h2 class="filter__empty-title">
+        Nothing was found for the selected
+        <span class="filter__empty-accent">filters...</span>
+      </h2>
+      <p class="filter__empty-description">
+        Try adjusting your search parameters or browse our range by other
+        criteria to find the perfect product for you.
+      </p>
+    </div>
+    <div class="filter__full">
+      <ul class="filter__card-list"></ul>
     </div>
   </div>
-
-  <select class="filter__category" name="category" id="category">
-    <option data-placeholder="true"></option>
-    <option value="Show_all">Show all</option>
-  </select>
-</form>
-
-<div class="filter__page">
-  <div class="filter__empty">
-    <h2 class="filter__empty-title">
-      Nothing was found for the selected
-      <span class="filter__empty-accent">filters...</span>
-    </h2>
-    <p class="filter__empty-description">
-      Try adjusting your search parameters or browse our range by other criteria
-      to find the perfect product for you.
-    </p>
-  </div>
-  <div class="filter__full">
-    <ul class="filter__card-list"></ul>
-  </div>
+  <div id="pagination" class="tui-pagination"></div>
 </div>
-<div id="pagination" class="tui-pagination"></div>

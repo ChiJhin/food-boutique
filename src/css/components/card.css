@@ -1,9 +1,10 @@
 .card__item {
   width: 100%;
-  padding: 10px;
+  padding: 20px;
   border-radius: 10px;
   background-color: var(--secondary-white-color);
 }
+
 .card__image-wrap {
   padding: 18px;
   margin-bottom: 20px;
@@ -31,12 +32,18 @@
 .card__text {
   font-size: 12px;
   font-weight: 400;
+  color: #0101014b;
+}
+
+.card__accent {
+  color: var(--primary-black-color);
 }
 
 .card__order {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 9px;
 }
 
 .card__btn {
@@ -50,13 +57,30 @@
   border-radius: 50%;
 }
 
-.card__btn-icon {
+.card__btn:hover {
+  background-color: var(--hover-button-green-color);
+}
+
+.card__icon {
   fill: var(--primary-white-color);
   width: 14px;
   height: 15px;
 }
 
 .card__icon--checked {
-  fill: none;
+  stroke-width: 3px;
   stroke: var(--primary-white-color);
+}
+
+@media screen and (min-width: 768px) {
+  .card__item {
+    width: 336px;
+    height: 360px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .card__item {
+    width: 295px;
+  }
 }

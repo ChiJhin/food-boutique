@@ -1,8 +1,8 @@
 import icon from '/img/icons.svg';
 
 export default {
-  mainCatd: function handleMarkup(data) {
-    return data
+  mainCard: function mainCard(data) {
+    const list = data
       .map(
         ({
           category,
@@ -22,23 +22,33 @@ export default {
                     <h2 class="card__title">${name}</h2>
                     <div class="card__description">
                       <p class="card__text">
-                        Category:<span class="card__accent">${category}</span>
+                        Category: <span class="card__accent">${category}</span>
                       </p>
-                      <p class="card__text">Size:<span class="card__accent">${size}</span></p>
+                      <p class="card__text">Size: <span class="card__accent">${size}</span></p>
                       <p class="card__text">
-                        Popularity:<span class="card__accent">${popularity}</span>
+                        Popularity: <span class="card__accent">${popularity}</span>
                       </p>
                     </div>
                     <div class="card__order">
                       <p class="curd__price">$${price}</p>
                       <button
                         id="${_id}"
-                        class="card__btn js-object"
-                        data-jsname="btn1${_id}"
+                        class="card__btn js-btn-buy js-object"
+                        data-jsname="buy${_id}"
                         type="button"
                       >
-                        <svg class="card__btn-icon js-btn">
+                        <svg class="card__icon js-btn">
                           <use class="js-btn" href="${icon}#discount-cart"></use>
+                        </svg>
+                      </button>
+                      <button
+                        id="${_id}"
+                        class="card__btn js-btn-check js-object"
+                        data-jsname="check${_id}"
+                        type="button"
+                      >
+                        <svg class="card__icon card__icon--checked js-btn">
+                          <use class="js-btn" href="${icon}#check-mark-icon"></use>
                         </svg>
                       </button>
                        
@@ -48,47 +58,59 @@ export default {
                 `
       )
       .join('');
+
+    return list;
   },
 
   popularCard: function popularCard(data) {
-    return data
+    const list = data
       .map(
         ({ _id, img, name, category, size, popularity }) => ` 
-        <li class ="popular__item" data-productid="${_id}" >
+        <li class ="card__item" data-productid="${_id}" >
             <div id ="${_id}" class="card">
                   <div class="card__image-wrap">
                         <img class = "card__image" src="${img}" alt="${name}" loading="lazy" />
                   </div>
                 
                 <div class="card__description">
-                        <h3 class="card__description-title">${name}</h3>      
-                        <p class="card__description-text card__description-category">
-                            Category:<span class="card__description-accent"> ${category}</span>
+                        <h3 class="card__title">${name}</h3>      
+                        <p class="card__text card__description-category">
+                            Category: <span class="card__accent"> ${category}</span>
                         </p>
                         <div class="card__description-info">
-                            <p class="card__description-text">
-                                Size:<span class="card__description-accent"> ${size}</span>
+                            <p class="card__text">
+                                Size: <span class="card__accent"> ${size}</span>
                             </p>
-                            <p class="card__description-text">
-                                Popularity:<span class="card__description-accent"> ${popularity}</span>
+                            <p class="card__text">
+                                Popularity: <span class="card__accent"> ${popularity}</span>
                             </p>
                         </div>
                    </div>
                     <button
                         id="${_id}"
-                        class="card__btn  js-object"
-                        data-jsname="btn1${_id}"
+                        class="card__btn js-btn-buy js-object"
+                        data-jsname="buy${_id}"
                         type="button"
                       >
-                        <svg class="card__btn-icon">
+                        <svg class="card__icon">
                           <use class="js-btn" href="${icon}#discount-cart"></use>
                         </svg>
                       </button>
-                      
+                      <button
+                        id="${_id}"
+                        class="card__btn js-btn-check js-object"
+                        data-jsname="check${_id}"
+                        type="button"
+                      >
+                        <svg class="card__icon card__icon--checked js-btn">
+                          <use class="js-btn" href="${icon}#check-mark-icon"></use>
+                        </svg>
+                      </button>
                         </div> 
                    </li>`
       )
       .join('');
+    return list;
   },
 
   dicountCard: function discountCard(data) {
@@ -108,14 +130,14 @@ export default {
 
     productsList.push(data[firstProduct], data[secondProduct]);
 
-    return productsList
+    const list = productsList
       .map(
         ({ _id, img, name, price }) => `
-                                <li class="discount__item" data-productId="${_id}">
+                                <li class="card__item" data-productId="${_id}">
                                   <div id="${_id}" class="card">
                                     <div class="card__image-wrap">
                                       <img
-                                        class="card__img"
+                                        class="card__image"
                                         src="${img}"
                                         alt="${name}"
                                         data-productId="${_id}"
@@ -125,19 +147,28 @@ export default {
 
                                     <div class="card__description" data-productId="${_id}">
                                       <h3 class="card__description-title">${name}</h3>
-                                      <div class="card__price" data-productId="${_id}">
+                                      <div class="card__order" data-productId="${_id}">
                                         <span class="discount-price" data-productId="${_id}"> $${price} </span>
                                         <button
                                           id="${_id}"
-                                          class="card__btn js-object"
-                                          data-jsname="btn1${_id}"
+                                          class="card__btn js-btn-buy js-object"
+                                          data-jsname="buy${_id}"
                                           type="button"
                                         >
-                                          <svg class="card__btn-icon">
+                                          <svg class="card__icon">
                                             <use class="js-btn" href="${icon}#discount-cart"></use>
                                           </svg>
                                         </button>
-                                        
+                                        <button
+                                          id="${_id}"
+                                          class="card__btn js-btn-check js-object"
+                                          data-jsname="check${_id}"
+                                          type="button"
+                                        >
+                                          <svg class="card__icon card__icon--checked js-btn">
+                                            <use class="js-btn" href="${icon}#check-mark-icon"></use>
+                                          </svg>
+                                        </button>
                                       </div>
                                     </div>
                                   </div>
@@ -145,5 +176,17 @@ export default {
             `
       )
       .join('');
+
+    return list;
+  },
+
+  checkBtn: function checkBtn(data) {
+    return data.map(product => {
+      const item = document.querySelector(`[data-jsname=check${product._id}]`);
+      if (!item) {
+        return;
+      }
+      item.style.display = 'none';
+    });
   },
 };
