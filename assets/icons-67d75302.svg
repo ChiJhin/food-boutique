@@ -6,7 +6,7 @@
     </symbol>
 
     <symbol id="check-mark-icon" viewBox="0 0 32 32">
-      <path   stroke-linecap="round" stroke-linejoin="round" stroke-width="3.556" d="M26.667 8 12 22.667 5.333 16" style="stroke:var(--color1, #e8e8e2)"/>
+      <path d="M 26.980469 5.9902344 A 1.0001 1.0001 0 0 0 26.292969 6.2929688 L 11 21.585938 L 4.7070312 15.292969 A 1.0001 1.0001 0 1 0 3.2929688 16.707031 L 10.292969 23.707031 A 1.0001 1.0001 0 0 0 11.707031 23.707031 L 27.707031 7.7070312 A 1.0001 1.0001 0 0 0 26.980469 5.9902344 z"></path>
     </symbol>
 
     <symbol id="facebook-icon" viewBox="0 0 32 32">

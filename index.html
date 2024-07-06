@@ -11,8 +11,8 @@
     />
     
     <script type="module" crossorigin src="/food-boutique/assets/vendor-d1d8eb77.js"></script>
-    <script type="module" crossorigin src="/food-boutique/assets/index-8ca2d7a3.js"></script>
-    <link rel="stylesheet" href="/food-boutique/assets/index-5c636168.css">
+    <script type="module" crossorigin src="/food-boutique/assets/index-10154ae7.js"></script>
+    <link rel="stylesheet" href="/food-boutique/assets/index-35b67ad4.css">
     <link rel="stylesheet" href="/food-boutique/assets/vendor-a0b14d8a.css">
   </head>
   <body>
@@ -21,7 +21,7 @@
   <a class="header__logo" href="./index.html">
     <span class="header__logo-icon-wrap">
       <svg class="header__logo-icon">
-        <use href="/food-boutique/assets/icons-b225282e.svg#logo-icon"></use>
+        <use href="/food-boutique/assets/icons-67d75302.svg#logo-icon"></use>
       </svg>
     </span>
     <p class="header__logo-title">Food Boutique</p>
@@ -31,7 +31,7 @@
     <a href="./cart.html" class="header__cart-page">
       <span class="header__cart-icon-wrap">
         <svg class="header__cart-icon">
-          <use href="/food-boutique/assets/icons-b225282e.svg#shopping-cart-icon"></use>
+          <use href="/food-boutique/assets/icons-67d75302.svg#shopping-cart-icon"></use>
         </svg>
       </span>
       <p class="header__cart-title">CART(0)</p>
@@ -41,7 +41,7 @@
 
 
       <main class="container">
-        <section class="hero js-object">
+        <section class="hero">
   <h1 class="hero__title">
     Welcome to the <span class="hero__title-accent">Food</span> Boutique!
   </h1>
@@ -78,59 +78,63 @@
 </section>
 
         <section class="filter">
-          <form class="filter__form" name="filter" autocomplete="off">
-  <div class="filter__wrap">
-    <label class="filter__lable" for="filter-inpute"> Filters: </label>
-    <div class="filter__input-wrap">
-      <input
-        type="text"
-        id="filter-inpute"
-        class="filter__input"
-        name="filter-inpute"
-        placeholder="Search for anything"
-      />
-      <button class="filter__search-button" type="submit">
-        <svg class="filter__search-icon">
-          <use href="/food-boutique/assets/icons-b225282e.svg#search-icon"></use>
-        </svg>
-      </button>
+          <div>
+  <form class="filter__form" name="filter" autocomplete="off">
+    <div class="filter__wrap">
+      <label class="filter__lable" for="filter-inpute"> Filters: </label>
+      <div class="filter__input-wrap">
+        <input
+          type="text"
+          id="filter-inpute"
+          class="filter__input"
+          name="filter-inpute"
+          placeholder="Search for anything"
+        />
+        <button class="filter__search-button" type="submit">
+          <svg class="filter__search-icon">
+            <use href="/food-boutique/assets/icons-67d75302.svg#search-icon"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <select class="filter__category" name="category" id="category">
+      <option data-placeholder="true"></option>
+      <option value="Show_all">Show all</option>
+    </select>
+  </form>
+
+  <div class="filter__page">
+    <div class="filter__empty">
+      <h2 class="filter__empty-title">
+        Nothing was found for the selected
+        <span class="filter__empty-accent">filters...</span>
+      </h2>
+      <p class="filter__empty-description">
+        Try adjusting your search parameters or browse our range by other
+        criteria to find the perfect product for you.
+      </p>
+    </div>
+    <div class="filter__full">
+      <ul class="filter__card-list"></ul>
     </div>
   </div>
-
-  <select class="filter__category" name="category" id="category">
-    <option data-placeholder="true"></option>
-    <option value="Show_all">Show all</option>
-  </select>
-</form>
-
-<div class="filter__page">
-  <div class="filter__empty">
-    <h2 class="filter__empty-title">
-      Nothing was found for the selected
-      <span class="filter__empty-accent">filters...</span>
-    </h2>
-    <p class="filter__empty-description">
-      Try adjusting your search parameters or browse our range by other criteria
-      to find the perfect product for you.
-    </p>
-  </div>
-  <div class="filter__full">
-    <ul class="filter__card-list"></ul>
-  </div>
+  <div id="pagination" class="tui-pagination"></div>
 </div>
-<div id="pagination" class="tui-pagination"></div>
 
-        </section>
-        <aside class="popular">
+          <div class="aside">
+            <aside class="popular">
   <h2 class="aside-title">Popular products</h2>
   <ul class="popular__list"></ul>
 </aside>
 
-        <aside>
+            <aside class="discount">
   <h2 class="aside-title">Discount products</h2>
   <ul class="discount__list js-object"></ul>
 </aside>
 
+          </div>
+        </section>
       </main>
 
       <footer class="footer">
@@ -140,7 +144,7 @@
         <a class="footer__logo" href="./index.html">
           <span class="footer__logo-icon-wrap">
             <svg class="footer__logo-icon">
-              <use href="/food-boutique/assets/icons-b225282e.svg#logo-icon"></use>
+              <use href="/food-boutique/assets/icons-67d75302.svg#logo-icon"></use>
             </svg>
           </span>
           <p class="footer__logo-title">Food Boutique</p>
@@ -153,7 +157,7 @@
               target="_blank"
             >
               <svg class="footer__sosial-icon">
-                <use href="/food-boutique/assets/icons-b225282e.svg#facebook-icon"></use>
+                <use href="/food-boutique/assets/icons-67d75302.svg#facebook-icon"></use>
               </svg>
             </a>
           </li>
@@ -164,7 +168,7 @@
               target="_blank"
             >
               <svg class="footer__sosial-icon">
-                <use href="/food-boutique/assets/icons-b225282e.svg#instagram-icon"></use>
+                <use href="/food-boutique/assets/icons-67d75302.svg#instagram-icon"></use>
               </svg>
             </a>
           </li>
@@ -175,7 +179,7 @@
               target="_blank"
             >
               <svg class="footer__sosial-icon">
-                <use href="/food-boutique/assets/icons-b225282e.svg#youtube-icon"></use>
+                <use href="/food-boutique/assets/icons-67d75302.svg#youtube-icon"></use>
               </svg>
             </a>
           </li>
