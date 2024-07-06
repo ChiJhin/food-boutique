@@ -7,8 +7,6 @@ export default async function category() {
   await fetchApi
     .categories()
     .then(data => {
-      console.log(data);
-
       categories.insertAdjacentHTML('afterbegin', markupFilter(data));
       new SlimSelect({
         select: '#category',
