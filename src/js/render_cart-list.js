@@ -8,7 +8,7 @@ const cardListEmty = document.querySelector('.filter__empty');
 
 let limit = 6;
 
-export default async function getProducts(params) {
+export default async function getProducts(page, params) {
   if (screen.width >= 768) {
     limit = 8;
   }
@@ -17,7 +17,7 @@ export default async function getProducts(params) {
   }
 
   await fetchApi
-    .products({ limit: limit, params })
+    .products({ limit: limit, page: page, params })
     .then(data => {
       if (!data) {
         filter.style.display = 'none';

@@ -1,5 +1,6 @@
 import Pagination from 'tui-pagination';
 import 'tui-pagination/dist/tui-pagination.css';
+import getProducts from '../render_cart-list';
 
 export default async function paginy({ perPage, totalPages, page }) {
   const options = {
@@ -29,4 +30,13 @@ export default async function paginy({ perPage, totalPages, page }) {
   };
 
   const pagination = await new Pagination('pagination', options);
+
+  pagination.on('beforeMove', function (event) {
+    const page = event.page;
+    getProducts(page);
+  });
+
+  // pagination.on('afterMove', function (eventData) {
+  //   alert('The current page is ' + eventData.page);
+  // });
 }

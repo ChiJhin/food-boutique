@@ -17,7 +17,9 @@ export default {
                 <li class="card__item js-object" id="${_id}" data-productId="${_id}">
                   <div class="card__wrap">
                     <div class="card__image-wrap">
-                      <img src="${img}" alt="${name}" class="card__image" />
+
+                      <img src="${img}" alt="${name}" class="card__image" loading="lazy"/>
+
                     </div>
                     <h2 class="card__title">${name}</h2>
                     <div class="card__description">
@@ -30,7 +32,9 @@ export default {
                       </p>
                     </div>
                     <div class="card__order">
-                      <p class="curd__price">$${price}</p>
+
+                      <p class="card__price">$${price}</p>
+
                       <button
                         id="${_id}"
                         class="card__btn js-btn-buy js-object"

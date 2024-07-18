@@ -35,13 +35,22 @@
   color: #0101014b;
 }
 
+
+.card__price {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+
 .card__accent {
   color: var(--primary-black-color);
 }
 
 .card__order {
   display: flex;
-  align-items: center;
+
+  align-items: end;
+
   justify-content: space-between;
   gap: 9px;
 }

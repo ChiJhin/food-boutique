@@ -65,7 +65,11 @@
             <input
               class="footer__form-inpute"
               type="email"
+              id="user-email"
+              name="email"
               placeholder="Email"
+              pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
+              required
             />
             <button class="footer__form-button" type="submit">Send</button>
           </form>
