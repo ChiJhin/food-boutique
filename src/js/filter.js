@@ -9,6 +9,7 @@ export default async function category() {
     .then(data => {
       categories.insertAdjacentHTML('beforeend', markupFilter(data));
       let select = new SlimSelect({
+
         select: '#category',
         settings: {
           showSearch: false,
