@@ -7,9 +7,9 @@
     <title>Cart</title>
     
     <script type="module" crossorigin src="/food-boutique/assets/vendor-d1d8eb77.js"></script>
-    <script type="module" crossorigin src="/food-boutique/assets/index-10154ae7.js"></script>
+    <script type="module" crossorigin src="/food-boutique/assets/index-70d556b6.js"></script>
     <link rel="stylesheet" href="/food-boutique/assets/vendor-a0b14d8a.css">
-    <link rel="stylesheet" href="/food-boutique/assets/index-35b67ad4.css">
+    <link rel="stylesheet" href="/food-boutique/assets/index-1936caac.css">
   </head>
   <body>
     <div class="wrapper">
@@ -134,7 +134,11 @@
             <input
               class="footer__form-inpute"
               type="email"
+              id="user-email"
+              name="email"
               placeholder="Email"
+              pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
+              required
             />
             <button class="footer__form-button" type="submit">Send</button>
           </form>
@@ -150,6 +154,27 @@
     </div>
   </div>
 </footer>
+
+      <div class="backdrop-subscribe js-backdrop-subscribe">
+  <div class="modal-subscribe">
+    <button class="modal-btn js-close-subscribe">
+      <svg class="modal-btn-icon">
+        <use href="/food-boutique/assets/icons-67d75302.svg#close-icon"></use>
+      </svg>
+    </button>
+    <div class="modal__subscribe"></div>
+  </div>
+</div>
+<div class="backdrop-order js-backdrop-order">
+  <div class="modal-order">
+    <button class="modal-btn js-close-order">
+      <svg class="modal-btn-icon">
+        <use href="/food-boutique/assets/icons-67d75302.svg#close-icon"></use>
+      </svg>
+    </button>
+    <div class="modal__order"></div>
+  </div>
+</div>
 
     </div>
     
