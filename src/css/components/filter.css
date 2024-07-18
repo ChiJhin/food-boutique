@@ -2,6 +2,10 @@
   padding-top: 86px;
 }
 
+.filter__form {
+  margin-bottom: 40px;
+}
+
 .filter__form,
 .filter__wrap {
   display: flex;
@@ -16,6 +20,7 @@
 .filter__input {
   padding: 14px 20px;
   max-width: 335px;
+  min-height: 48px;
   width: 100%;
   border: 1px solid rgba(1, 1, 1, 0.3);
   border-radius: 30px;
@@ -46,9 +51,11 @@
 .filter__category {
   padding: 14px 20px;
   max-width: 335px;
+  min-height: 48px;
   width: 100%;
   border: 1px solid rgba(1, 1, 1, 0.3);
   background-color: var(--primary-white-color);
+  appearance: none;
 }
 
 .filter__empty {
@@ -83,6 +90,16 @@
   background-color: var(--secondary-white-color);
 }
 
+.ss-main {
+  max-height: 48px;
+}
+
+.filter__card-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
 @media screen and (min-width: 768px) {
   .filter__form {
     flex-direction: row;
@@ -90,5 +107,23 @@
   }
   .filter__category {
     max-width: 189px;
+  }
+  .filter__card-list {
+    gap: 32px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .filter {
+    display: flex;
+    justify-content: space-between;
+  }
+  .aside {
+    width: 275px;
+    margin-top: 112px;
+  }
+  .filter__card-list {
+    row-gap: 40px;
+    column-gap: 20px;
   }
 }

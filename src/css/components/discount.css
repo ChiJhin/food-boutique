@@ -1,0 +1,33 @@
+.discount__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-bottom: 80px;
+}
+.discount__list .card {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  height: auto;
+}
+.discount__list .card__item {
+  padding: 16px;
+  height: 232px;
+}
+.discount__list .card__image-wrap {
+  margin: 0;
+}
+.discount__list .card__image {
+  width: 114px;
+}
+.discount__list .card__description {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .discount__list {
+    justify-content: space-between;
+  }
+}

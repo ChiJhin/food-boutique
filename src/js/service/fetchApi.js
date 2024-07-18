@@ -1,5 +1,3 @@
-
-
 import axios from 'axios';
 
 export default {
@@ -70,6 +68,8 @@ export default {
         this._baseURL + this._subscriptionURL,
         params
       );
+      console.log(result);
+
       return result;
     } catch (error) {
       throw error;

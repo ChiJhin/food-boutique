@@ -36,18 +36,23 @@
   min-width: 270px;
   max-width: 375px;
   width: 100%;
-  outline: 1px solid tomato;
 }
 
 @media screen and (min-width: 768px) {
   .container {
     padding: 0 32px;
+    width: 768px;
     max-width: 768px;
   }
 }
 @media screen and (min-width: 1440px) {
   .container {
     padding: 0 100px;
+    width: 1440px;
     max-width: 1440px;
   }
+}
+
+.aside-title {
+  margin-bottom: 20px;
 }

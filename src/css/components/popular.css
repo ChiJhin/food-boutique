@@ -1,0 +1,78 @@
+.popular {
+  margin-bottom: 80px;
+}
+
+.popular__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.popular__list .card__item {
+  padding: 10px;
+}
+
+.popular__list .card__image-wrap {
+  padding: 9px;
+  margin-bottom: 0;
+}
+.popular__list .card__image {
+  width: 56px;
+}
+.popular__list .card__description {
+  display: flex;
+  flex-direction: column;
+}
+
+.popular__list .card__btn {
+  padding: 0;
+  width: 20px;
+  height: 20px;
+  background-color: var(--primary-white-color);
+}
+.popular__list .card__icon {
+  fill: var(--primary-green-color);
+  width: 9px;
+  height: 9px;
+}
+.popular__list .card__btn:hover {
+  background-color: var(--primary-green-color);
+}
+.popular__list .card__btn:hover .card__icon {
+  fill: var(--primary-white-color);
+}
+
+.popular__list .card__icon--checked {
+  stroke-width: 3px;
+  stroke: var(--primary-green-color);
+}
+
+.card {
+  display: flex;
+  justify-content: space-between;
+  height: 78px;
+  background-color: var(--secondary-white-color);
+  border-radius: 10px;
+}
+
+.card__description-category {
+  margin-bottom: 9px;
+}
+
+.card__description-info {
+  display: flex;
+  gap: 9px;
+}
+
+@media screen and (min-width: 768px) {
+  .popular__list .card__item {
+    width: 275px;
+    height: 98px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .popular {
+    margin-bottom: 40px;
+  }
+}
