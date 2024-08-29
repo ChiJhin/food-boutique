@@ -41,9 +41,6 @@
 }
 
 /* Mobile */
-.hero {
-  margin-top: 72px;
-}
 
 .hero-icon {
   transform: translate(-50%);
@@ -91,9 +88,6 @@
 
 /* Tablet */
 @media screen and (min-width: 768px) {
-  .hero {
-    margin-top: 116px;
-  }
   .food-letter {
     letter-spacing: -0.178em;
   }
@@ -127,9 +121,6 @@
 
 /* Desktop */
 @media screen and (min-width: 1440px) {
-  .hero {
-    margin-top: 77px;
-  }
   .food-letter {
     letter-spacing: -0.2em;
   }

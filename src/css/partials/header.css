@@ -1,8 +1,8 @@
 /*? -------------------------- Header -------------------------- */
 .header {
-  position: sticky;
+  /* position: sticky; */
   width: 100%;
-  top: 0;
+  /* top: 0; */
   background-color: var(--color-light-grey);
   z-index: 5;
 }

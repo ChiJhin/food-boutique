@@ -1,26 +1,18 @@
 /*? -------------------------- Products Section -------------------------- */
 .products {
-    margin-top: 40px;
-    margin-bottom: 80px;
+  margin-top: 40px;
 }
 
 /*? --------------------------Media-------------------------- */
-/* Tablet */
-@media screen and (min-width: 768px) {
-    .products {
-        margin-bottom: 100px;
-    }
-}
 
 /* Desktop */
 @media screen and (min-width: 1440px) {
-    .products {
-        margin-top: 60px;
-        margin-bottom: 61px;
-    }
+  .products {
+    margin-top: 60px;
+  }
 
-    .products-section-container {
-        display: flex;
-        gap: 40px;
-    }
+  .products-section-container {
+    display: flex;
+    gap: 40px;
+  }
 }
