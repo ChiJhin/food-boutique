@@ -2,33 +2,50 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="./public/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home</title>
-    <link
-      href="https://unpkg.com/slim-select@latest/dist/slimselect.css"
-      rel="stylesheet"
-    />
+
+    <title>Food Boutique Store</title>
+
     <link rel="stylesheet" href="./css/main.css" />
   </head>
   <body>
-    <div class="wrapper">
-      <load ="partials/header.html" />
+    <!-- Header -->
+    <load src="partials/header.html" />
 
-      <main class="container">
-        <load ="partials/home/hero.html" />
-        <section class="filter">
-          <load ="partials/home/filter.html" />
-          <div class="aside">
-            <load ="partials/home/popular.html" />
-            <load ="partials/home/discount.html" />
+    <!-- Main -->
+    <main>
+      <!-- Hero -->
+      <load src="partials/products/hero.html" />
+
+      <!-- Filters -->
+      <load src="partials/products/filters.html" />
+
+      <section class="products" id="products">
+        <h2 class="visually-hidden">All Prodcuts</h2>
+        <div class="container products-section-container">
+          <!-- 3 containers groupped together -->
+          <load src="partials/products/product-list.html" />
+          <div>
+            <load src="partials/products/popular-products.html" />
+            <load src="partials/products/discounted-products.html" />
           </div>
-        </section>
-      </main>
+        </div>
+      </section>
+    </main>
 
-      <load ="partials/footer.html" />
-      <load ="partials/modals.html" />
-    </div>
-    <script type="module" src="index.js"></script>
+    <!-- Footer -->
+    <load src="partials/footer.html" />
+
+    <!-- Modal window -->
+    <load src="partials/products/modal-window.html" />
+
+    <!-- Modal success window -->
+    <load src="partials/cart/success-order-modal.html" />
+
+    <!-- Scroll up -->
+    <load src="partials/products/scroll.html" />
+
+    <script type="module" src="./js/index.js"></script>
   </body>
 </html>

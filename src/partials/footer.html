@@ -1,87 +1,192 @@
-<footer class="footer">
+<footer class="footer" id="footer">
   <div class="container">
-    <div class="footer-main">
-      <div class="footer__first-block">
-        <a class="footer__logo" href="./index.html">
-          <span class="footer__logo-icon-wrap">
-            <svg class="footer__logo-icon">
-              <use href="./img/icons.svg#logo-icon"></use>
-            </svg>
-          </span>
-          <p class="footer__logo-title">Food Boutique</p>
+    <div class="footer-tablet">
+      <div class="footer-logo-and-social-list">
+        <a aria-label="Hidden icon" href="./index.html"
+          ><svg class="footer-icon">
+            <use href="./img/icons.svg#icon-logo-footer"></use>
+          </svg>
         </a>
-        <ul class="footer__sosial-list">
-          <li class="footer__sosial-item">
+
+        <ul class="social-list">
+          <li>
             <a
-              class="footer__sosial-link"
+              aria-label="Facebook"
               href="https://www.facebook.com/goITclub/"
+              class="social-list-link"
               target="_blank"
-            >
-              <svg class="footer__sosial-icon">
-                <use href="./img/icons.svg#facebook-icon"></use>
+              ><svg class="social-list-icon">
+                <use href="./img/icons.svg#icon-facebook"></use>
               </svg>
             </a>
           </li>
-          <li class="footer__sosial-item">
+          <li>
             <a
-              class="footer__sosial-link"
+              aria-label="Instagram"
               href="https://www.instagram.com/goitclub/"
+              class="social-list-link"
               target="_blank"
-            >
-              <svg class="footer__sosial-icon">
-                <use href="./img/icons.svg#instagram-icon"></use>
+              ><svg class="social-list-icon">
+                <use href="./img/icons.svg#icon-instagram"></use>
               </svg>
             </a>
           </li>
-          <li class="footer__sosial-item">
+          <li>
             <a
-              class="footer__sosial-link"
+              aria-label="Youtube"
               href="https://www.youtube.com/c/GoIT"
+              class="social-list-link"
               target="_blank"
-            >
-              <svg class="footer__sosial-icon">
-                <use href="./img/icons.svg#youtube-icon"></use>
+              ><svg class="social-list-icon">
+                <use href="./img/icons.svg#icon-youtube"></use>
               </svg>
             </a>
           </li>
         </ul>
       </div>
-      <div class="footer__second-block">
-        <div class="footer__slogan">
-          <h2 class="footer__slogan-totle">
+
+      <div class="footer-laptop-section">
+        <div class="footer-text-section">
+          <h3 class="footer-tagline">
             Discover the Variety of Flavors and Quality
-          </h2>
-          <p class="footer__slogan-description">
+          </h3>
+
+          <p class="footer-section-description">
             An online store where you will find fresh, natural and delicious
             products for a healthy life and unforgettable gastronomic
             adventures.
           </p>
         </div>
-        <div class="footer__form-block">
-          <p class="footer__form-description">
+        <div>
+          <p class="footer-subscribe">
             Subscribe and learn about new products!
           </p>
-          <form class="footer__form">
-            <input
-              class="footer__form-inpute"
-              type="email"
-              id="user-email"
-              name="email"
-              placeholder="Email"
-              pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
-              required
-            />
-            <button class="footer__form-button" type="submit">Send</button>
+
+          <form class="footer-subscribe-form">
+            <label>
+              <input
+                class="subscribe-form-input"
+                type="email"
+                name="email"
+                placeholder="Email"
+                pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,4}$"
+                required
+              />
+            </label>
+
+            <button
+              type="submit"
+              class="footer-subscribe-btn"
+              aria-label="email subscribe"
+            >
+              Send
+            </button>
           </form>
         </div>
       </div>
     </div>
-    <div class="policy">
-      <a class="policy__title" href="#">Food Boutique. All rights reserved.</a>
-      <div class="policy__privacy-&-terms">
-        <a href="#">Privacy Policy</a><span> / </span
-        ><a href="#">Terms of Service</a>
+
+    <div class="footer-tablet-bottom-text">
+      <p class="footer-bottom-text">Food Boutique. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a
+          aria-label="privacy policy"
+          href="#privacy-policy"
+          class="footer-bottom-link js-modal-policy-open"
+          >Privacy Policy</a
+        >
+        <span class="footer-bottom-link">/</span>
+        <a
+          aria-label="terms of service"
+          href="#terms-of-service"
+          class="footer-bottom-link js-modal-terms-open"
+          >Terms of Service</a
+        >
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL POLICY AND TEAMS -->
+  <div
+    class="modal-policy-container is-hidden-policy js-policy"
+    id="#privacy-policy"
+  >
+    <div class="modal-privacy-policy">
+      <button
+        type="button"
+        class="policy-btn js-policy-close"
+        aria-label="close privacy policy"
+        data-modal-policy-close
+      >
+        <svg class="policy-btn-close-icon">
+          <use href="./img/icons.svg#icon-x-close"></use>
+        </svg>
+      </button>
+      <div class="privacy-policy-content">
+        <svg class="footer-icon">
+          <use href="./img/icons.svg#icon-logo-footer"></use>
+        </svg>
+        <h2 class="policy-name">Privacy Policy</h2>
+        <p class="policy-users">Greetings Users,</p>
+        <p class="policy-text">
+          Welcome, here is our policy on privacy. This policy sets out how Food
+          Boutique collects and uses the information that we collect about you
+          when you use the Service. This policy also explains the choices that
+          you can make about the way that we use your information.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div
+    class="modal-policy-container is-hidden-policy js-terms"
+    id="#terms-of-service"
+  >
+    <div class="modal-privacy-policy">
+      <button
+        type="button"
+        class="policy-btn js-terms-close"
+        aria-label="close terms of service"
+        data-modal-policy-close
+      >
+        <svg class="policy-btn-close-icon">
+          <use href="./img/icons.svg#icon-x-close"></use>
+        </svg>
+      </button>
+      <div class="privacy-policy-content">
+        <svg class="footer-icon">
+          <use href="./img/icons.svg#icon-logo-footer"></use>
+        </svg>
+        <h2 class="policy-name">Terms Of Service</h2>
+        <p class="policy-users">Greetings Users,</p>
+        <p class="policy-text">
+          A terms of service sets all user rules, restrictions, and prohibited
+          behaviors, and outlines your company’s liability limitations, property
+          rights, and dispute resolutions.
+        </p>
       </div>
     </div>
   </div>
 </footer>
+
+<!-- MODAL SUBSCRIBE -->
+<div class="modal-subscribe-container is-hidden-subscribe js-subscribe">
+  <div class="modal-subscribe">
+    <button
+      type="button"
+      class="subscribe-btn js-subscribe-close"
+      aria-label="close modal window subscribe"
+      data-modal-subscribe-close
+    >
+      <svg class="policy-btn-close-icon">
+        <use href="./img/icons.svg#icon-x-close"></use>
+      </svg>
+    </button>
+    <div class="subscribe-content">
+      <svg class="footer-icon">
+        <use href="./img/icons.svg#icon-logo-footer"></use>
+      </svg>
+      <p class="subscribe-text"></p>
+    </div>
+  </div>
+</div>
