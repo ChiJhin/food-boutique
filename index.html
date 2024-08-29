@@ -2,251 +2,425 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/food-boutique/assets/favicon-6b89ced2.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home</title>
-    <link
-      href="https://unpkg.com/slim-select@latest/dist/slimselect.css"
-      rel="stylesheet"
-    />
+
+    <title>Food Boutique Store</title>
+
     
-    <script type="module" crossorigin src="/food-boutique/assets/vendor-d1d8eb77.js"></script>
-    <script type="module" crossorigin src="/food-boutique/assets/index-70d556b6.js"></script>
-    <link rel="stylesheet" href="/food-boutique/assets/index-1936caac.css">
-    <link rel="stylesheet" href="/food-boutique/assets/vendor-a0b14d8a.css">
+    <script type="module" crossorigin src="/food-boutique/commonHelpers2.js"></script>
+    <link rel="modulepreload" crossorigin href="/food-boutique/assets/vendor-3d670edc.js">
+    <link rel="modulepreload" crossorigin href="/food-boutique/assets/icons-aa3fcac5.js">
+    <link rel="stylesheet" href="/food-boutique/assets/icons-35f6fcc3.css">
   </head>
   <body>
-    <div class="wrapper">
-      <header class="header container">
-  <a class="header__logo" href="./index.html">
-    <span class="header__logo-icon-wrap">
-      <svg class="header__logo-icon">
-        <use href="/food-boutique/assets/icons-67d75302.svg#logo-icon"></use>
-      </svg>
-    </span>
-    <p class="header__logo-title">Food Boutique</p>
-  </a>
-  <div class="header__nav">
-    <a href="./index.html" class="header__home-page">Home</a>
-    <a href="./cart.html" class="header__cart-page">
-      <span class="header__cart-icon-wrap">
-        <svg class="header__cart-icon">
-          <use href="/food-boutique/assets/icons-67d75302.svg#shopping-cart-icon"></use>
+    <!-- Header -->
+    <header class="header" id="header">
+  <div class="container">
+    <nav class="header-navigation">
+      <a class="header-logo" href="./index.html" aria-label="Home website">
+        <svg class="header-logo" width="154" height="28">
+          <use href="/food-boutique/assets/icons-8fcbdd30.svg#icon-logo-header"></use>
         </svg>
-      </span>
-      <p class="header__cart-title">CART(0)</p>
-    </a>
+      </a>
+      <ul class="header-list">
+        <li>
+          <a class="home-button" href="./index.html" aria-label="Home">Home</a>
+        </li>
+        <li>
+          <a
+            aria-label="Basket"
+            class="cart-button-container"
+            href="./cart.html"
+          >
+            <div class="cart-button">
+              <svg class="cart-icon" width="14" height="14">
+                <use href="/food-boutique/assets/icons-8fcbdd30.svg#icon-shopping-cart"></use>
+              </svg>
+
+              <div class="mobile-cart-text">
+                <span class="cart-item-count">0</span>
+              </div>
+            </div>
+
+            <span class="cart-text">
+              CART (<span class="cart-item-count">0</span>)
+            </span>
+          </a>
+        </li>
+      </ul>
+    </nav>
   </div>
 </header>
 
 
-      <main class="container">
-        <section class="hero">
-  <h1 class="hero__title">
-    Welcome to the <span class="hero__title-accent">Food</span> Boutique!
-  </h1>
+    <!-- Main -->
+    <main>
+      <!-- Hero -->
+      <section class="hero" id="hero">
+  <div class="container">
+    <div class="hero-text-container">
+      <h1 class="hero-title">
+        Welcome to the
+        <span class="hero-span">
+          <!-- <span class="food-letter" id="letter1">F</span>
+          <span class="food-letter" id="letter2">o</span>
+          <span class="food-letter" id="letter3">o</span>
+          <span class="food-letter" id="letter4">d</span>
+          <span class="food-letter" id="letter5"></span> -->
+          Food
+        </span>
 
-  <p class="hero__description">
-    With Food Boutique, you're not just subscribing to food, you're signing up
-    for a fresher, fitter, and happier you.
-  </p>
-
-  <div class="hero__image-wrap">
-    <picture>
-      <source
-        media="(min-width: 1440px)"
-        srcset="/food-boutique/assets/hero-desktop@1x-dfce4e24.jpg 1x, /food-boutique/assets/hero-desktop@2x-e84d1cb0.jpg 2x"
-      />
-
-      <source
-        media="(min-width: 768px)"
-        srcset="/food-boutique/assets/hero-tablet@1x-4af3d966.jpg 1x, /food-boutique/assets/hero-tablet@2x-410e78b4.jpg 2x"
-      />
-
-      <source
-        media="(min-width: 200px)"
-        srcset="/food-boutique/assets/hero-mobile@1x-63382c28.jpg 1x, /food-boutique/assets/hero-mobile@2x-9d3bcbc9.jpg 2x"
-      />
-      <img
-        class="hero__image"
-        src="/food-boutique/assets/hero-mobile@1x-63382c28.jpg"
-        alt="Свіжі та соковиті овочі"
-      />
-    </picture>
-    <img class="hero__lable" src="/food-boutique/assets/hero-label-b2bbf8db.png" alt="Лейбл" />
+        Boutique!
+      </h1>
+      <p class="hero-paragraph">
+        With Food Boutique, you're not just subscribing to food, you're signing
+        up for a fresher, fitter, and happier you.
+      </p>
+    </div>
+    <div class="hero-container">
+      <svg class="hero-icon" width="100" height="100">
+        <use href="/food-boutique/assets/icons-8fcbdd30.svg#icon-organic-food"></use>
+      </svg>
+      <picture>
+        <source
+          srcset="/food-boutique/assets/hero-9b6b189c.jpg 1x, /food-boutique/assets/hero-2x-fe8be99f.jpg 2x"
+          media="(min-width: 1440px)"
+        />
+        <source
+          srcset="/food-boutique/assets/hero-tablet-2e5f0b75.jpg 1x, /food-boutique/assets/hero-tablet-2x-c75005c9.jpg 2x"
+          media="(min-width: 768px)"
+        />
+        <source
+          srcset="/food-boutique/assets/hero-mobile-b33a25b4.jpg 1x, /food-boutique/assets/hero-mobile-2x-784cc218.jpg 2x"
+          media="(max-width: 767px)"
+        />
+        <img
+          src="/food-boutique/assets/hero-2x-fe8be99f.jpg"
+          class="hero-image"
+          alt="women-sportswear-working-out-outdoors"
+        />
+      </picture>
+    </div>
   </div>
 </section>
 
-        <section class="filter">
-          <div>
-  <form class="filter__form" name="filter" autocomplete="off">
-    <div class="filter__wrap">
-      <label class="filter__lable" for="filter-inpute"> Filters: </label>
-      <div class="filter__input-wrap">
+
+      <!-- Filters -->
+      <section class="filters" id="filters">
+  <div class="container">
+    <h2 class="title-filter">Filters:</h2>
+    <form class="search-form">
+      <div class="input-container">
         <input
           type="text"
-          id="filter-inpute"
-          class="filter__input"
-          name="filter-inpute"
+          name="keyword"
+          class="input-modal-subscribe"
           placeholder="Search for anything"
+          id="search-item"
         />
-        <button class="filter__search-button" type="submit">
-          <svg class="filter__search-icon">
-            <use href="/food-boutique/assets/icons-67d75302.svg#search-icon"></use>
-          </svg>
-        </button>
+        <svg
+          width="20"
+          height="20"
+          class="icon-search container-search-everything"
+          id="search-icon"
+        >
+          <use href="/food-boutique/assets/icons-8fcbdd30.svg#icon-search"></use>
+        </svg>
       </div>
-    </div>
-
-    <select class="filter__category" name="category" id="category">
-      <option data-placeholder="true"></option>
-      <option value="Show_all">Show all</option>
-    </select>
-  </form>
-
-  <div class="filter__page">
-    <div class="filter__empty">
-      <h2 class="filter__empty-title">
-        Nothing was found for the selected
-        <span class="filter__empty-accent">filters...</span>
-      </h2>
-      <p class="filter__empty-description">
-        Try adjusting your search parameters or browse our range by other
-        criteria to find the perfect product for you.
-      </p>
-    </div>
-    <div class="filter__full">
-      <ul class="filter__card-list"></ul>
-    </div>
+      <div class="select-menu-category">
+        <div class="select-btn-custom" id="category">
+          <span class="sBtn-text-select">Categories</span>
+          <svg
+            width="20"
+            height="20"
+            class="icon-arrow-down container-arrow-category"
+          >
+            <use href="/food-boutique/assets/icons-8fcbdd30.svg#icon-arrow-down"></use>
+          </svg>
+        </div>
+      </div>
+      <div class="select-menu" id="sort">
+        <div class="select-btn">
+          <span class="sBtn-text">A to Z</span>
+          <svg width="20" height="20" class="icon-arrow-down container-arrow">
+            <use href="/food-boutique/assets/icons-8fcbdd30.svg#icon-arrow-down"></use>
+          </svg>
+        </div>
+      </div>
+    </form>
   </div>
-  <div id="pagination" class="tui-pagination"></div>
-</div>
+</section>
 
-          <div class="aside">
-            <aside class="popular">
-  <h2 class="aside-title">Popular products</h2>
-  <ul class="popular__list"></ul>
-</aside>
 
-            <aside class="discount">
-  <h2 class="aside-title">Discount products</h2>
-  <ul class="discount__list js-object"></ul>
-</aside>
+      <section class="products" id="products">
+        <h2 class="visually-hidden">All Prodcuts</h2>
+        <div class="container products-section-container">
+          <!-- 3 containers groupped together -->
+          <section class="all-products" id="all-products">
+  <h2 class="visually-hidden">Filtered Products</h2>
+</section>
+
+          <div>
+            <section class="popular-products" id="popular-products">
+  <div class="popular-products-container">
+    <h2 class="popular-products-section-title">Popular products</h2>
+  </div>
+</section>
+
+            <section class="discount-products" id="discount-products">
+  <div class="discount-container">
+    <h2 class="discount-title">Discount products</h2>
+  </div>
+</section>
 
           </div>
-        </section>
-      </main>
+        </div>
+      </section>
+    </main>
 
-      <footer class="footer">
+    <!-- Footer -->
+    <footer class="footer" id="footer">
   <div class="container">
-    <div class="footer-main">
-      <div class="footer__first-block">
-        <a class="footer__logo" href="./index.html">
-          <span class="footer__logo-icon-wrap">
-            <svg class="footer__logo-icon">
-              <use href="/food-boutique/assets/icons-67d75302.svg#logo-icon"></use>
-            </svg>
-          </span>
-          <p class="footer__logo-title">Food Boutique</p>
+    <div class="footer-tablet">
+      <div class="footer-logo-and-social-list">
+        <a aria-label="Hidden icon" href="./index.html"
+          ><svg class="footer-icon">
+            <use href="/food-boutique/assets/icons-8fcbdd30.svg#icon-logo-footer"></use>
+          </svg>
         </a>
-        <ul class="footer__sosial-list">
-          <li class="footer__sosial-item">
+
+        <ul class="social-list">
+          <li>
             <a
-              class="footer__sosial-link"
+              aria-label="Facebook"
               href="https://www.facebook.com/goITclub/"
+              class="social-list-link"
               target="_blank"
-            >
-              <svg class="footer__sosial-icon">
-                <use href="/food-boutique/assets/icons-67d75302.svg#facebook-icon"></use>
+              ><svg class="social-list-icon">
+                <use href="/food-boutique/assets/icons-8fcbdd30.svg#icon-facebook"></use>
               </svg>
             </a>
           </li>
-          <li class="footer__sosial-item">
+          <li>
             <a
-              class="footer__sosial-link"
+              aria-label="Instagram"
               href="https://www.instagram.com/goitclub/"
+              class="social-list-link"
               target="_blank"
-            >
-              <svg class="footer__sosial-icon">
-                <use href="/food-boutique/assets/icons-67d75302.svg#instagram-icon"></use>
+              ><svg class="social-list-icon">
+                <use href="/food-boutique/assets/icons-8fcbdd30.svg#icon-instagram"></use>
               </svg>
             </a>
           </li>
-          <li class="footer__sosial-item">
+          <li>
             <a
-              class="footer__sosial-link"
+              aria-label="Youtube"
               href="https://www.youtube.com/c/GoIT"
+              class="social-list-link"
               target="_blank"
-            >
-              <svg class="footer__sosial-icon">
-                <use href="/food-boutique/assets/icons-67d75302.svg#youtube-icon"></use>
+              ><svg class="social-list-icon">
+                <use href="/food-boutique/assets/icons-8fcbdd30.svg#icon-youtube"></use>
               </svg>
             </a>
           </li>
         </ul>
       </div>
-      <div class="footer__second-block">
-        <div class="footer__slogan">
-          <h2 class="footer__slogan-totle">
+
+      <div class="footer-laptop-section">
+        <div class="footer-text-section">
+          <h3 class="footer-tagline">
             Discover the Variety of Flavors and Quality
-          </h2>
-          <p class="footer__slogan-description">
+          </h3>
+
+          <p class="footer-section-description">
             An online store where you will find fresh, natural and delicious
             products for a healthy life and unforgettable gastronomic
             adventures.
           </p>
         </div>
-        <div class="footer__form-block">
-          <p class="footer__form-description">
+        <div>
+          <p class="footer-subscribe">
             Subscribe and learn about new products!
           </p>
-          <form class="footer__form">
-            <input
-              class="footer__form-inpute"
-              type="email"
-              id="user-email"
-              name="email"
-              placeholder="Email"
-              pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
-              required
-            />
-            <button class="footer__form-button" type="submit">Send</button>
+
+          <form class="footer-subscribe-form">
+            <label>
+              <input
+                class="subscribe-form-input"
+                type="email"
+                name="email"
+                placeholder="Email"
+                pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,4}$"
+                required
+              />
+            </label>
+
+            <button
+              type="submit"
+              class="footer-subscribe-btn"
+              aria-label="email subscribe"
+            >
+              Send
+            </button>
           </form>
         </div>
       </div>
     </div>
-    <div class="policy">
-      <a class="policy__title" href="#">Food Boutique. All rights reserved.</a>
-      <div class="policy__privacy-&-terms">
-        <a href="#">Privacy Policy</a><span> / </span
-        ><a href="#">Terms of Service</a>
+
+    <div class="footer-tablet-bottom-text">
+      <p class="footer-bottom-text">Food Boutique. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a
+          aria-label="privacy policy"
+          href="#privacy-policy"
+          class="footer-bottom-link js-modal-policy-open"
+          >Privacy Policy</a
+        >
+        <span class="footer-bottom-link">/</span>
+        <a
+          aria-label="terms of service"
+          href="#terms-of-service"
+          class="footer-bottom-link js-modal-terms-open"
+          >Terms of Service</a
+        >
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL POLICY AND TEAMS -->
+  <div
+    class="modal-policy-container is-hidden-policy js-policy"
+    id="#privacy-policy"
+  >
+    <div class="modal-privacy-policy">
+      <button
+        type="button"
+        class="policy-btn js-policy-close"
+        aria-label="close privacy policy"
+        data-modal-policy-close
+      >
+        <svg class="policy-btn-close-icon">
+          <use href="/food-boutique/assets/icons-8fcbdd30.svg#icon-x-close"></use>
+        </svg>
+      </button>
+      <div class="privacy-policy-content">
+        <svg class="footer-icon">
+          <use href="/food-boutique/assets/icons-8fcbdd30.svg#icon-logo-footer"></use>
+        </svg>
+        <h2 class="policy-name">Privacy Policy</h2>
+        <p class="policy-users">Greetings Users,</p>
+        <p class="policy-text">
+          Welcome, here is our policy on privacy. This policy sets out how Food
+          Boutique collects and uses the information that we collect about you
+          when you use the Service. This policy also explains the choices that
+          you can make about the way that we use your information.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div
+    class="modal-policy-container is-hidden-policy js-terms"
+    id="#terms-of-service"
+  >
+    <div class="modal-privacy-policy">
+      <button
+        type="button"
+        class="policy-btn js-terms-close"
+        aria-label="close terms of service"
+        data-modal-policy-close
+      >
+        <svg class="policy-btn-close-icon">
+          <use href="/food-boutique/assets/icons-8fcbdd30.svg#icon-x-close"></use>
+        </svg>
+      </button>
+      <div class="privacy-policy-content">
+        <svg class="footer-icon">
+          <use href="/food-boutique/assets/icons-8fcbdd30.svg#icon-logo-footer"></use>
+        </svg>
+        <h2 class="policy-name">Terms Of Service</h2>
+        <p class="policy-users">Greetings Users,</p>
+        <p class="policy-text">
+          A terms of service sets all user rules, restrictions, and prohibited
+          behaviors, and outlines your company’s liability limitations, property
+          rights, and dispute resolutions.
+        </p>
       </div>
     </div>
   </div>
 </footer>
 
-      <div class="backdrop-subscribe js-backdrop-subscribe">
+<!-- MODAL SUBSCRIBE -->
+<div class="modal-subscribe-container is-hidden-subscribe js-subscribe">
   <div class="modal-subscribe">
-    <button class="modal-btn js-close-subscribe">
-      <svg class="modal-btn-icon">
-        <use href="/food-boutique/assets/icons-67d75302.svg#close-icon"></use>
+    <button
+      type="button"
+      class="subscribe-btn js-subscribe-close"
+      aria-label="close modal window subscribe"
+      data-modal-subscribe-close
+    >
+      <svg class="policy-btn-close-icon">
+        <use href="/food-boutique/assets/icons-8fcbdd30.svg#icon-x-close"></use>
       </svg>
     </button>
-    <div class="modal__subscribe"></div>
-  </div>
-</div>
-<div class="backdrop-order js-backdrop-order">
-  <div class="modal-order">
-    <button class="modal-btn js-close-order">
-      <svg class="modal-btn-icon">
-        <use href="/food-boutique/assets/icons-67d75302.svg#close-icon"></use>
+    <div class="subscribe-content">
+      <svg class="footer-icon">
+        <use href="/food-boutique/assets/icons-8fcbdd30.svg#icon-logo-footer"></use>
       </svg>
-    </button>
-    <div class="modal__order"></div>
+      <p class="subscribe-text"></p>
+    </div>
   </div>
 </div>
 
+
+    <!-- Modal window -->
+    <div class="modal-background is-hidden">
+  <div class="modal"></div>
+</div>
+
+
+    <!-- Modal success window -->
+    <div class="success-blackdrop is-hidden">
+  <div class="success-modal">
+    <button
+      type="button"
+      class="success-modal-close-btn"
+      aria-label="success modal"
+    >
+      <svg class="success-modal-close-btn-icon">
+        <use href="/food-boutique/assets/icons-8fcbdd30.svg#icon-x-close"></use>
+      </svg>
+    </button>
+    <div class="success-modal-image">
+      <img
+        class="success-modal-order-image"
+        src="/food-boutique/assets/order-success-306e3459.png"
+        alt="Picture Success"
+        width="140"
+        height="140"
+        srcset="/food-boutique/assets/order-success-306e3459.png 1x, /food-boutique/assets/order-success-2x-1cb23d33.png 2x"
+      />
     </div>
+    <h3 class="success-modal-title">Order success</h3>
+    <p class="success-modal-text">
+      Thank you for shopping at Food Boutique. Your order has been received and
+      is now being freshly prepared just for you! Get ready to indulge in
+      nourishing goodness, delivered right to your doorstep. We're thrilled to
+      be part of your journey to better health and happiness.
+    </p>
+  </div>
+</div>
+
+
+    <!-- Scroll up -->
+    <a href="#" class="scroll-up" aria-label="scroll">
+  <svg class="scroll-icon">
+    <use href="/food-boutique/assets/icons-8fcbdd30.svg#icon-scroll"></use>
+  </svg>
+</a>
+
+
     
   </body>
 </html>

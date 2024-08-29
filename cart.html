@@ -2,181 +2,400 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/food-boutique/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cart</title>
+
+    <title>Food Cart</title>
+
     
-    <script type="module" crossorigin src="/food-boutique/assets/vendor-d1d8eb77.js"></script>
-    <script type="module" crossorigin src="/food-boutique/assets/index-70d556b6.js"></script>
-    <link rel="stylesheet" href="/food-boutique/assets/vendor-a0b14d8a.css">
-    <link rel="stylesheet" href="/food-boutique/assets/index-1936caac.css">
+    <script type="module" crossorigin src="/food-boutique/commonHelpers.js"></script>
+    <link rel="modulepreload" crossorigin href="/food-boutique/assets/vendor-3d670edc.js">
+    <link rel="modulepreload" crossorigin href="/food-boutique/assets/icons-aa3fcac5.js">
+    <link rel="stylesheet" href="/food-boutique/assets/icons-35f6fcc3.css">
   </head>
   <body>
-    <div class="wrapper">
-      <header class="header container">
-  <a class="header__logo" href="./index.html">
-    <span class="header__logo-icon-wrap">
-      <svg class="header__logo-icon">
-        <use href="/food-boutique/assets/icons-67d75302.svg#logo-icon"></use>
-      </svg>
-    </span>
-    <p class="header__logo-title">Food Boutique</p>
-  </a>
-  <div class="header__nav">
-    <a href="./index.html" class="header__home-page">Home</a>
-    <a href="./cart.html" class="header__cart-page">
-      <span class="header__cart-icon-wrap">
-        <svg class="header__cart-icon">
-          <use href="/food-boutique/assets/icons-67d75302.svg#shopping-cart-icon"></use>
+    <!-- Header -->
+    <header class="header" id="header">
+  <div class="container">
+    <nav class="header-navigation">
+      <a class="header-logo" href="./index.html" aria-label="Home website">
+        <svg class="header-logo" width="154" height="28">
+          <use href="/food-boutique/assets/icons-8fcbdd30.svg#icon-logo-header"></use>
         </svg>
-      </span>
-      <p class="header__cart-title">CART(0)</p>
-    </a>
+      </a>
+      <ul class="header-list">
+        <li>
+          <a class="home-button" href="./index.html" aria-label="Home">Home</a>
+        </li>
+        <li>
+          <a
+            aria-label="Basket"
+            class="cart-button-container"
+            href="./cart.html"
+          >
+            <div class="cart-button">
+              <svg class="cart-icon" width="14" height="14">
+                <use href="/food-boutique/assets/icons-8fcbdd30.svg#icon-shopping-cart"></use>
+              </svg>
+
+              <div class="mobile-cart-text">
+                <span class="cart-item-count">0</span>
+              </div>
+            </div>
+
+            <span class="cart-text">
+              CART (<span class="cart-item-count">0</span>)
+            </span>
+          </a>
+        </li>
+      </ul>
+    </nav>
   </div>
 </header>
 
 
-      <main class="container">
-        <section class="basket">
-  <h2 class="basket__quantity">
-    <span class="basket__icon-wrap">
-      <svg class="basket__icon">
-        <use href="/food-boutique/assets/icons-67d75302.svg#shopping-cart-icon"></use>
-      </svg> </span
-    >CART(0)
-  </h2>
-  <div class="basket__empty-block">
-    <picture>
-      <source media="(min-width: 768px)" srcset="/food-boutique/assets/empty-basket@2x-1ab3be8c.png " />
+    <!-- Main -->
+    <main>
+      <section class="cart" id="cart">
+  <div class="container">
+    <div class="cart-title-thumb">
+      <button
+        class="cart-shopping-button"
+        type="button"
+        aria-label="button cart shop"
+      >
+        <svg class="cart-shopping-icon" width="18" height="18">
+          <use href="/food-boutique/assets/icons-8fcbdd30.svg#icon-shopping-cart"></use>
+        </svg>
+      </button>
+      <h2 class="cart-title">Cart (<span class="cart-item-count">0</span>)</h2>
+    </div>
 
-      <img
-        class="basket__basket-image"
-        src="/food-boutique/assets/empty-basket@1x-9909cc93.png"
-        alt="Кошик"
-      />
-    </picture>
-    <h3 class="basket__empty-title">
-      Your basket is <span class="basket__accent">empty...</span>
-    </h3>
-    <p class="basket__empty-descroption">
-      Go to the main page to select your favorite products and add them to the
-      cart.
-    </p>
+    <div class="cart-desctop-thumb">
+      <div class="cart-added-list">
+        <button
+          class="cart-delete-button"
+          type="button"
+          aria-label="cart delete button"
+        >
+          Delete all
+          <svg class="cart-delete-icon" width="24" height="24">
+            <use href="/food-boutique/assets/icons-8fcbdd30.svg#icon-x-close"></use>
+          </svg>
+        </button>
+        <ul class="cart-basket-list"></ul>
+      </div>
+
+      <div class="total-order-thumb">
+        <p class="your-order-title">Your Order</p>
+        <div class="total-price-thumb">
+          <p class="cart-total-title">Total</p>
+          <p class="cart-sum">
+            Sum:
+            <span class="total-price" id="cart-total">$0.00</span>
+          </p>
+        </div>
+
+        <form class="checkout-field">
+          <label for="cart-client-email" class="cart-input-label">
+            <span class="placeholder-prefix">Mail:</span>
+            <input
+              type="email"
+              pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,4}$"
+              name="cart-client-email"
+              class="cart-basket-input"
+              id="cart-client-email"
+              placeholder="Enter your email"
+              required
+            />
+          </label>
+
+          <button
+            type="submit"
+            class="cart-submit-button"
+            aria-label="Checkout cart"
+          >
+            Checkout
+          </button>
+        </form>
+      </div>
+    </div>
   </div>
 </section>
 
-      </main>
-
-      <footer class="footer">
+      <section class="empty-cart" id="empty-cart">
   <div class="container">
-    <div class="footer-main">
-      <div class="footer__first-block">
-        <a class="footer__logo" href="./index.html">
-          <span class="footer__logo-icon-wrap">
-            <svg class="footer__logo-icon">
-              <use href="/food-boutique/assets/icons-67d75302.svg#logo-icon"></use>
-            </svg>
-          </span>
-          <p class="footer__logo-title">Food Boutique</p>
+    <div class="empty-cart-title-thumb">
+      <button
+        class="empty-cart-shopping-button"
+        type="button"
+        aria-label="empty cart"
+      >
+        <svg class="empty-cart-shopping-icon" width="18" height="18">
+          <use href="/food-boutique/assets/icons-8fcbdd30.svg#icon-shopping-cart"></use>
+        </svg>
+      </button>
+      <h2 class="empty-cart-title">
+        Cart
+        <span>(0)</span>
+      </h2>
+    </div>
+    <picture>
+      <source
+        srcset="/food-boutique/assets/yellow-shopping-basket-4ca51155.png 1x, /food-boutique/assets/yellow-shopping-basket-2x-464740c7.png 2x"
+        media="(min-width: 768px)"
+      />
+      <source
+        srcset="/food-boutique/assets/yellow-shopping-basket-mobile-65d04646.png 1x, /food-boutique/assets/yellow-shopping-basket-2x-mobile-c340c9ad.png 2x"
+        media="(max-width: 767px)"
+      />
+      <img
+        src="/food-boutique/assets/yellow-shopping-basket-4ca51155.png"
+        class="empty-cart-image"
+        alt="empty shopping cart"
+        width="132"
+      />
+    </picture>
+    <div class="empty-cart-container">
+      <p class="empty-cart-text">Your basket is <span>empty...</span></p>
+      <p class="empty-cart-instruction-text">
+        Go to the main page to select your favorite products and add them to the
+        cart.
+      </p>
+    </div>
+  </div>
+</section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+  <div class="container">
+    <div class="footer-tablet">
+      <div class="footer-logo-and-social-list">
+        <a aria-label="Hidden icon" href="./index.html"
+          ><svg class="footer-icon">
+            <use href="/food-boutique/assets/icons-8fcbdd30.svg#icon-logo-footer"></use>
+          </svg>
         </a>
-        <ul class="footer__sosial-list">
-          <li class="footer__sosial-item">
+
+        <ul class="social-list">
+          <li>
             <a
-              class="footer__sosial-link"
+              aria-label="Facebook"
               href="https://www.facebook.com/goITclub/"
+              class="social-list-link"
               target="_blank"
-            >
-              <svg class="footer__sosial-icon">
-                <use href="/food-boutique/assets/icons-67d75302.svg#facebook-icon"></use>
+              ><svg class="social-list-icon">
+                <use href="/food-boutique/assets/icons-8fcbdd30.svg#icon-facebook"></use>
               </svg>
             </a>
           </li>
-          <li class="footer__sosial-item">
+          <li>
             <a
-              class="footer__sosial-link"
+              aria-label="Instagram"
               href="https://www.instagram.com/goitclub/"
+              class="social-list-link"
               target="_blank"
-            >
-              <svg class="footer__sosial-icon">
-                <use href="/food-boutique/assets/icons-67d75302.svg#instagram-icon"></use>
+              ><svg class="social-list-icon">
+                <use href="/food-boutique/assets/icons-8fcbdd30.svg#icon-instagram"></use>
               </svg>
             </a>
           </li>
-          <li class="footer__sosial-item">
+          <li>
             <a
-              class="footer__sosial-link"
+              aria-label="Youtube"
               href="https://www.youtube.com/c/GoIT"
+              class="social-list-link"
               target="_blank"
-            >
-              <svg class="footer__sosial-icon">
-                <use href="/food-boutique/assets/icons-67d75302.svg#youtube-icon"></use>
+              ><svg class="social-list-icon">
+                <use href="/food-boutique/assets/icons-8fcbdd30.svg#icon-youtube"></use>
               </svg>
             </a>
           </li>
         </ul>
       </div>
-      <div class="footer__second-block">
-        <div class="footer__slogan">
-          <h2 class="footer__slogan-totle">
+
+      <div class="footer-laptop-section">
+        <div class="footer-text-section">
+          <h3 class="footer-tagline">
             Discover the Variety of Flavors and Quality
-          </h2>
-          <p class="footer__slogan-description">
+          </h3>
+
+          <p class="footer-section-description">
             An online store where you will find fresh, natural and delicious
             products for a healthy life and unforgettable gastronomic
             adventures.
           </p>
         </div>
-        <div class="footer__form-block">
-          <p class="footer__form-description">
+        <div>
+          <p class="footer-subscribe">
             Subscribe and learn about new products!
           </p>
-          <form class="footer__form">
-            <input
-              class="footer__form-inpute"
-              type="email"
-              id="user-email"
-              name="email"
-              placeholder="Email"
-              pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
-              required
-            />
-            <button class="footer__form-button" type="submit">Send</button>
+
+          <form class="footer-subscribe-form">
+            <label>
+              <input
+                class="subscribe-form-input"
+                type="email"
+                name="email"
+                placeholder="Email"
+                pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,4}$"
+                required
+              />
+            </label>
+
+            <button
+              type="submit"
+              class="footer-subscribe-btn"
+              aria-label="email subscribe"
+            >
+              Send
+            </button>
           </form>
         </div>
       </div>
     </div>
-    <div class="policy">
-      <a class="policy__title" href="#">Food Boutique. All rights reserved.</a>
-      <div class="policy__privacy-&-terms">
-        <a href="#">Privacy Policy</a><span> / </span
-        ><a href="#">Terms of Service</a>
+
+    <div class="footer-tablet-bottom-text">
+      <p class="footer-bottom-text">Food Boutique. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a
+          aria-label="privacy policy"
+          href="#privacy-policy"
+          class="footer-bottom-link js-modal-policy-open"
+          >Privacy Policy</a
+        >
+        <span class="footer-bottom-link">/</span>
+        <a
+          aria-label="terms of service"
+          href="#terms-of-service"
+          class="footer-bottom-link js-modal-terms-open"
+          >Terms of Service</a
+        >
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL POLICY AND TEAMS -->
+  <div
+    class="modal-policy-container is-hidden-policy js-policy"
+    id="#privacy-policy"
+  >
+    <div class="modal-privacy-policy">
+      <button
+        type="button"
+        class="policy-btn js-policy-close"
+        aria-label="close privacy policy"
+        data-modal-policy-close
+      >
+        <svg class="policy-btn-close-icon">
+          <use href="/food-boutique/assets/icons-8fcbdd30.svg#icon-x-close"></use>
+        </svg>
+      </button>
+      <div class="privacy-policy-content">
+        <svg class="footer-icon">
+          <use href="/food-boutique/assets/icons-8fcbdd30.svg#icon-logo-footer"></use>
+        </svg>
+        <h2 class="policy-name">Privacy Policy</h2>
+        <p class="policy-users">Greetings Users,</p>
+        <p class="policy-text">
+          Welcome, here is our policy on privacy. This policy sets out how Food
+          Boutique collects and uses the information that we collect about you
+          when you use the Service. This policy also explains the choices that
+          you can make about the way that we use your information.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div
+    class="modal-policy-container is-hidden-policy js-terms"
+    id="#terms-of-service"
+  >
+    <div class="modal-privacy-policy">
+      <button
+        type="button"
+        class="policy-btn js-terms-close"
+        aria-label="close terms of service"
+        data-modal-policy-close
+      >
+        <svg class="policy-btn-close-icon">
+          <use href="/food-boutique/assets/icons-8fcbdd30.svg#icon-x-close"></use>
+        </svg>
+      </button>
+      <div class="privacy-policy-content">
+        <svg class="footer-icon">
+          <use href="/food-boutique/assets/icons-8fcbdd30.svg#icon-logo-footer"></use>
+        </svg>
+        <h2 class="policy-name">Terms Of Service</h2>
+        <p class="policy-users">Greetings Users,</p>
+        <p class="policy-text">
+          A terms of service sets all user rules, restrictions, and prohibited
+          behaviors, and outlines your company’s liability limitations, property
+          rights, and dispute resolutions.
+        </p>
       </div>
     </div>
   </div>
 </footer>
 
-      <div class="backdrop-subscribe js-backdrop-subscribe">
+<!-- MODAL SUBSCRIBE -->
+<div class="modal-subscribe-container is-hidden-subscribe js-subscribe">
   <div class="modal-subscribe">
-    <button class="modal-btn js-close-subscribe">
-      <svg class="modal-btn-icon">
-        <use href="/food-boutique/assets/icons-67d75302.svg#close-icon"></use>
+    <button
+      type="button"
+      class="subscribe-btn js-subscribe-close"
+      aria-label="close modal window subscribe"
+      data-modal-subscribe-close
+    >
+      <svg class="policy-btn-close-icon">
+        <use href="/food-boutique/assets/icons-8fcbdd30.svg#icon-x-close"></use>
       </svg>
     </button>
-    <div class="modal__subscribe"></div>
-  </div>
-</div>
-<div class="backdrop-order js-backdrop-order">
-  <div class="modal-order">
-    <button class="modal-btn js-close-order">
-      <svg class="modal-btn-icon">
-        <use href="/food-boutique/assets/icons-67d75302.svg#close-icon"></use>
+    <div class="subscribe-content">
+      <svg class="footer-icon">
+        <use href="/food-boutique/assets/icons-8fcbdd30.svg#icon-logo-footer"></use>
       </svg>
-    </button>
-    <div class="modal__order"></div>
+      <p class="subscribe-text"></p>
+    </div>
   </div>
 </div>
 
+
+    <!-- Modal -->
+    <div class="success-blackdrop is-hidden">
+  <div class="success-modal">
+    <button
+      type="button"
+      class="success-modal-close-btn"
+      aria-label="success modal"
+    >
+      <svg class="success-modal-close-btn-icon">
+        <use href="/food-boutique/assets/icons-8fcbdd30.svg#icon-x-close"></use>
+      </svg>
+    </button>
+    <div class="success-modal-image">
+      <img
+        class="success-modal-order-image"
+        src="/food-boutique/assets/order-success-306e3459.png"
+        alt="Picture Success"
+        width="140"
+        height="140"
+        srcset="/food-boutique/assets/order-success-306e3459.png 1x, /food-boutique/assets/order-success-2x-1cb23d33.png 2x"
+      />
     </div>
+    <h3 class="success-modal-title">Order success</h3>
+    <p class="success-modal-text">
+      Thank you for shopping at Food Boutique. Your order has been received and
+      is now being freshly prepared just for you! Get ready to indulge in
+      nourishing goodness, delivered right to your doorstep. We're thrilled to
+      be part of your journey to better health and happiness.
+    </p>
+  </div>
+</div>
+
+
     
   </body>
 </html>
